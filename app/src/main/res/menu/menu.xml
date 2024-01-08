@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/about1"
+        android:title="About"
+        />
+    <item
+        android:id="@+id/int_options"
+        android:title="int mode">
+        <menu>
+            <item
+                android:id="@+id/floor"
+                android:title="floor"/>
+            <item
+                android:id="@+id/ceil"
+                android:title="ceil"/>
+            <item
+                android:id="@+id/round"
+                android:title="round"/>
+        </menu>
+
+    </item>
+
+</menu>

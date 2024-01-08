@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05"
+        android:background="#DCB3B3"
+        android:id="@+id/toolbar">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_int"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_margin="15dp"
+            android:layout_marginEnd="20dp"
+            android:background="#BBB0BD"
+            android:text="int"
+            android:textAllCaps="false" />
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/btn_rad_deg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#BBB0BD"
+            android:textOff="RAD"
+            android:textOn="DEG" />
+
+        <Spinner
+            android:id="@+id/btn_decimals"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_margin="15dp"
+            android:background="#BBB0BD"
+            android:textAlignment="center" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_action_name"
+            android:id="@+id/menu"
+            android:layout_gravity="right"
+            android:layout_marginEnd="20dp"
+            />
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.5"
+        android:gravity="bottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="10dp"
+            android:hint="Ans"
+            android:textSize="21sp"
+            android:id="@+id/box_ans"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/box_input"/>
+
+        <HorizontalScrollView
+            android:id="@+id/box_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+
+            <EditText
+                android:id="@+id/Input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Input"
+                android:background="@null"
+                android:padding="10dp"
+                android:textSize="25sp" />
+
+        </HorizontalScrollView>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/boxbutton"
+        app:cardCornerRadius="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="bottom"
+        app:cardBackgroundColor="#DCB3B3"
+        android:layout_weight="3"
+        >
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:columnCount="6"
+            android:columnOrderPreserved="true"
+            android:background="#ECD1D1"
+            android:rowCount="5"
+            android:rowOrderPreserved="true">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_sin"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text="sin"
+                android:textAllCaps="false"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cos"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text="cos"
+                android:textAllCaps="false"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_pow"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text="^"
+                android:textAllCaps="false"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:id="@+id/btn_2nd"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:textOff="2nd"
+                android:textOn="1st"
+                android:textAllCaps="false"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_div"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text="÷"
+                android:textAllCaps="false"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_del"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text="DEl"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_tan"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text="tan"
+                android:textAllCaps="false"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_log"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text="log"
+                android:textAllCaps="false"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#949595"
+                android:text="7"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#949595"
+                android:text="8"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_9"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#949595"
+                android:text="9"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_x"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text="x"
+                android:textAllCaps="false"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_e"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text="e"
+                android:textAllCaps="false"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_root"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text="²√"
+                android:textAllCaps="false"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#949595"
+                android:text="4"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#949595"
+                android:text="5"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#949595"
+                android:text="6"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_minus"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text="-"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_bracUp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text="("
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_bracDown"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text=")"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#949595"
+                android:text="1"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#949595"
+                android:text="2"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#949595"
+                android:text="3"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_plus"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text="+"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_AC"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#60B7DF"
+                android:text="AC"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_nCr"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text="nCr"
+                android:textAllCaps="false"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_dot"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text="."
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#949595"
+                android:text="0"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_pie"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#BBB0BD"
+                android:text="π"
+                android:textAllCaps="false"
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_ans"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="#A87474"
+                android:text="="
+                android:textColor="#535252"
+                android:textSize="25sp" />
+
+
+        </GridLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>
